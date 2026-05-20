@@ -4,293 +4,187 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — GainTrack</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0a0a0a;
-    --surface: #111111;
-    --border: #1e1e1e;
-    --accent: #c8ff00;
-    --text: #e8e8e8;
-    --muted: #666;
-    --heading: #ffffff;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.75;
-    min-height: 100vh;
-  }
-
-  header {
-    padding: 48px 0 40px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  .logo {
-    font-family: 'DM Mono', monospace;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--accent);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 32px;
-    display: block;
-  }
-
-  h1 {
-    font-size: clamp(28px, 5vw, 42px);
-    font-weight: 600;
-    color: var(--heading);
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-  }
-
-  .meta {
-    margin-top: 16px;
-    font-size: 13px;
-    color: var(--muted);
-    font-family: 'DM Mono', monospace;
-  }
-
-  main {
-    padding: 56px 0 96px;
-  }
-
-  .intro {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--accent);
-    padding: 24px 28px;
-    border-radius: 4px;
-    margin-bottom: 56px;
-    font-size: 15px;
-    color: #aaa;
-  }
-
-  section {
-    margin-bottom: 48px;
-  }
-
-  h2 {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--heading);
-    letter-spacing: -0.01em;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  h2::before {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background: var(--accent);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  p { margin-bottom: 12px; color: #b0b0b0; font-size: 15px; }
-  p:last-child { margin-bottom: 0; }
-
-  ul {
-    list-style: none;
-    margin: 12px 0;
-    padding: 0;
-  }
-
-  ul li {
-    padding: 6px 0 6px 20px;
-    position: relative;
-    color: #b0b0b0;
-    font-size: 15px;
-  }
-
-  ul li::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-size: 12px;
-  }
-
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 0 0 48px;
-  }
-
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  .contact-box {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 28px;
-    border-radius: 4px;
-    margin-top: 16px;
-  }
-
-  .contact-box p { margin: 0; font-size: 14px; }
-
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 32px 0;
-    text-align: center;
-    font-size: 12px;
-    color: var(--muted);
-    font-family: 'DM Mono', monospace;
-  }
+:root {
+  --bg: #0a0a0a; --surface: #111111; --border: #1e1e1e;
+  --accent: #c8ff00; --red: #ff4444; --text: #e8e8e8;
+  --muted: #555; --heading: #ffffff; --body: #a8a8a8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.75; }
+nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+.nav-logo { font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; }
+.nav-links { display: flex; gap: 8px; }
+.nav-link { font-size: 13px; color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 20px; transition: all 0.15s; white-space: nowrap; }
+.nav-link:hover { color: var(--text); background: var(--surface); }
+.nav-link.active { color: var(--accent); background: rgba(200,255,0,0.08); }
+header { padding: 64px 0 48px; border-bottom: 1px solid var(--border); }
+.container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+.tag { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; display: block; }
+h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 600; color: var(--heading); line-height: 1.1; letter-spacing: -0.025em; }
+.meta { margin-top: 16px; font-size: 13px; color: var(--muted); font-family: 'DM Mono', monospace; }
+main { padding: 64px 0 120px; }
+.intro { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 20px 24px; border-radius: 4px; margin-bottom: 56px; font-size: 14px; color: var(--body); }
+section { margin-bottom: 52px; }
+h2 { font-size: 17px; font-weight: 600; color: var(--heading); letter-spacing: -0.01em; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+h2::before { content: ''; display: inline-block; width: 5px; height: 5px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
+p { margin-bottom: 12px; color: var(--body); font-size: 15px; }
+p:last-child { margin-bottom: 0; }
+ul { list-style: none; margin: 12px 0; padding: 0; }
+ul li { padding: 5px 0 5px 18px; position: relative; color: var(--body); font-size: 15px; }
+ul li::before { content: '—'; position: absolute; left: 0; color: var(--accent); font-size: 11px; top: 8px; }
+strong { color: var(--text); font-weight: 500; }
+.divider { border: none; border-top: 1px solid var(--border); margin: 0 0 52px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.contact-box { background: var(--surface); border: 1px solid var(--border); padding: 24px; border-radius: 8px; margin-top: 12px; }
+.contact-box p { margin: 4px 0; font-size: 14px; }
+footer { border-top: 1px solid var(--border); padding: 40px 0; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 16px; }
+.footer-links { display: flex; gap: 20px; }
+.footer-link { font-size: 13px; color: var(--muted); text-decoration: none; }
+.footer-link:hover { color: var(--text); }
+.footer-copy { font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; }
+@media (max-width: 600px) { .nav-links .nav-link { font-size: 12px; padding: 5px 8px; } .footer-inner { flex-direction: column; align-items: flex-start; } }
 </style>
 </head>
 <body>
-
+<nav>
+  <a href="index.html" class="nav-logo">GainTrack</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link active">Privacy</a>
+    <a href="terms.html" class="nav-link">Terms</a>
+    <a href="delete-account.html" class="nav-link">Delete Account</a>
+  </div>
+</nav>
 <header>
   <div class="container">
-    <span class="logo">GainTrack</span>
+    <span class="tag">Legal</span>
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: May 20, 2026 &nbsp;·&nbsp; Last updated: May 20, 2026</p>
+    <p class="meta">Effective: May 20, 2026 &nbsp;·&nbsp; Last updated: May 20, 2026</p>
   </div>
 </header>
-
 <main>
   <div class="container">
-
-    <div class="intro">
-      Your privacy matters. This policy explains what data GainTrack collects, why we collect it, and how we protect it. We collect only what is necessary to provide the service.
-    </div>
+    <div class="intro">Your privacy matters. This policy explains what data GainTrack collects, why, and how we protect it. We collect only what is necessary to provide the service.</div>
 
     <section>
       <h2>Who We Are</h2>
-      <p>GainTrack is a fitness tracking application developed and maintained by GainTrack. If you have any questions about this policy, you can reach us at <a href="mailto:gaintrack.fitness@gmail.com">gaintrack.fitness@gmail.com</a>.</p>
-    </section>
-
-    <hr class="divider">
+      <p>GainTrack is a fitness tracking application. For questions about this policy, contact us at <a href="mailto:gaintrack.fitness@gmail.com">gaintrack.fitness@gmail.com</a>.</p>
+    </section><hr class="divider">
 
     <section>
       <h2>Information We Collect</h2>
-      <p>We collect information you provide directly and data generated by your use of the app:</p>
+      <p>We collect information you provide and data generated by your use of the app:</p>
       <ul>
         <li><strong>Account information:</strong> Name, email address, and profile picture via Google Sign-In</li>
         <li><strong>Fitness data:</strong> Workout logs, exercises, sets, reps, weight, and duration</li>
         <li><strong>Nutrition data:</strong> Meal entries, food items, and daily macro totals</li>
-        <li><strong>Body measurements:</strong> Weight, body fat percentage, and physical measurements you choose to log</li>
+        <li><strong>Body measurements:</strong> Weight, body fat percentage, and physical measurements you log</li>
         <li><strong>Goals and preferences:</strong> Fitness goals, equipment, calorie and macro targets</li>
-        <li><strong>Usage data:</strong> Feature interactions and app performance telemetry</li>
-        <li><strong>Push notification token:</strong> To deliver scheduled reminders (only if you grant permission)</li>
+        <li><strong>Usage and telemetry data:</strong> Feature interactions and app performance metrics used to improve the product</li>
+        <li><strong>Push notification token:</strong> To deliver reminders (only if you grant permission)</li>
       </ul>
-    </section>
-
-    <hr class="divider">
+    </section><hr class="divider">
 
     <section>
       <h2>How We Use Your Information</h2>
-      <p>We use your data exclusively to provide and improve GainTrack:</p>
       <ul>
         <li>Authenticate your identity and maintain your account</li>
-        <li>Store and sync your workout and nutrition history</li>
+        <li>Store and sync your workout and nutrition history across devices</li>
         <li>Generate personalized progression suggestions and AI coaching responses</li>
         <li>Send lifecycle notifications and reminders you opt into</li>
-        <li>Analyze aggregate usage to improve app features</li>
+        <li>Analyze aggregate, anonymized usage to improve app features</li>
         <li>Process subscription purchases via RevenueCat</li>
+        <li>Comply with legal obligations</li>
       </ul>
       <p>We do not sell your personal data. We do not use your data for advertising.</p>
-    </section>
-
-    <hr class="divider">
+    </section><hr class="divider">
 
     <section>
       <h2>AI Coach Feature</h2>
-      <p>GainTrack Pro includes an AI coaching feature powered by Google Gemini. When you use this feature, your fitness data and the content of your messages are sent to our backend server and then to Google's Gemini API to generate responses. This data is used solely to produce your personalized response and is not used to train AI models.</p>
-    </section>
-
-    <hr class="divider">
+      <p>GainTrack Pro includes an AI coaching feature powered by Google Gemini. When you use this feature, your fitness data and the content of your messages are sent to our secure backend and then to Google's Gemini API to generate responses. This data is used solely to produce your personalized response. We do not use your conversations to train AI models. You can revoke AI data sharing consent at any time from Profile → Privacy.</p>
+    </section><hr class="divider">
 
     <section>
       <h2>Third-Party Services</h2>
-      <p>GainTrack uses the following third-party services, each with their own privacy policies:</p>
+      <p>GainTrack integrates with the following third-party services, each governed by their own privacy policies:</p>
       <ul>
-        <li><strong>Google Firebase &amp; Firestore</strong> — authentication and cloud data storage</li>
-        <li><strong>RevenueCat</strong> — subscription and in-app purchase management</li>
-        <li><strong>Google Gemini API</strong> — AI coaching responses (Pro feature)</li>
-        <li><strong>Expo / EAS</strong> — app delivery and over-the-air updates</li>
+        <li><strong>Google Firebase &amp; Firestore</strong> — authentication and cloud data storage (<a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a>)</li>
+        <li><strong>RevenueCat</strong> — subscription and in-app purchase management (<a href="https://www.revenuecat.com/privacy" target="_blank">Privacy Policy</a>)</li>
+        <li><strong>Google Gemini API</strong> — AI coaching responses for Pro users (<a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>)</li>
+        <li><strong>Expo / EAS</strong> — app delivery and over-the-air updates (<a href="https://expo.dev/privacy" target="_blank">Privacy Policy</a>)</li>
+        <li><strong>MongoDB Atlas</strong> — backend database infrastructure (<a href="https://www.mongodb.com/legal/privacy-policy" target="_blank">Privacy Policy</a>)</li>
+        <li><strong>Apple Health / Google Fit</strong> — optional health data integration (Pro feature, requires explicit consent)</li>
       </ul>
-    </section>
+    </section><hr class="divider">
 
-    <hr class="divider">
+    <section>
+      <h2>Health Data</h2>
+      <p>If you enable health integrations (Pro feature), GainTrack may access workout and nutrition data from Apple Health or Google Fit with your explicit consent. Health data is used only to enrich your GainTrack experience and is never shared with third parties or used for advertising. You can revoke consent at any time from Profile → Health Integrations.</p>
+    </section><hr class="divider">
 
     <section>
       <h2>Data Storage and Security</h2>
-      <p>Your data is stored on Google Firebase (Firestore) and MongoDB Atlas, both of which use industry-standard encryption at rest and in transit. We use Firebase Authentication to ensure only you can access your account. We do not store passwords — authentication is handled entirely by Google Sign-In.</p>
-    </section>
-
-    <hr class="divider">
+      <p>Your data is stored on Google Firestore and MongoDB Atlas, both using industry-standard encryption at rest and in transit (TLS 1.2+). We use Firebase Authentication to ensure only you can access your account. We do not store passwords — authentication is handled entirely via Google Sign-In (OAuth 2.0). API keys and secrets are never stored in the app bundle.</p>
+    </section><hr class="divider">
 
     <section>
       <h2>Data Retention</h2>
-      <p>We retain your data for as long as your account is active. If you delete your account, your personal data is removed from our systems within 30 days. Aggregated, anonymized analytics data may be retained longer.</p>
-    </section>
+      <p>We retain your data for as long as your account is active. If you delete your account, your personal data is removed from our systems within 30 days. Subscription transaction records may be retained for up to 7 years to comply with applicable financial regulations. Anonymized, aggregated analytics data may be retained indefinitely.</p>
+    </section><hr class="divider">
 
-    <hr class="divider">
+    <section>
+      <h2>International Data Transfers</h2>
+      <p>GainTrack is operated from the European Union. Your data may be processed in data centers located in the EU and the United States (via Google Firebase and MongoDB Atlas). These transfers are subject to appropriate safeguards including Standard Contractual Clauses where required by applicable law.</p>
+    </section><hr class="divider">
 
     <section>
       <h2>Your Rights</h2>
-      <p>You have the right to:</p>
+      <p>Depending on your location, you may have the following rights regarding your personal data:</p>
       <ul>
-        <li>Access the personal data we hold about you</li>
-        <li>Request correction of inaccurate data</li>
-        <li>Request deletion of your account and associated data</li>
-        <li>Withdraw consent for push notifications at any time via device settings</li>
+        <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
+        <li><strong>Correction:</strong> Request correction of inaccurate data</li>
+        <li><strong>Deletion:</strong> Request deletion of your account and associated data</li>
+        <li><strong>Portability:</strong> Export your data via Profile → Export My Data</li>
+        <li><strong>Restriction:</strong> Request we limit processing of your data</li>
+        <li><strong>Objection:</strong> Object to processing based on legitimate interests</li>
+        <li><strong>Withdraw consent:</strong> Revoke push notifications, AI data sharing, or health sync at any time via app settings</li>
       </ul>
-      <p>To exercise any of these rights, contact us at <a href="mailto:gaintrack.fitness@gmail.com">gaintrack.fitness@gmail.com</a>.</p>
-    </section>
-
-    <hr class="divider">
+      <p>To exercise any of these rights, contact us at <a href="mailto:gaintrack.fitness@gmail.com">gaintrack.fitness@gmail.com</a>. We will respond within 30 days. EU/EEA residents may also lodge a complaint with their local data protection authority.</p>
+    </section><hr class="divider">
 
     <section>
       <h2>Children's Privacy</h2>
-      <p>GainTrack is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
-    </section>
-
-    <hr class="divider">
+      <p>GainTrack is intended for users 18 years of age and older. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+    </section><hr class="divider">
 
     <section>
       <h2>Changes to This Policy</h2>
-      <p>We may update this privacy policy from time to time. We will notify you of significant changes via the app or email. The effective date at the top of this page will always reflect the latest version.</p>
-    </section>
-
-    <hr class="divider">
+      <p>We may update this policy as the product evolves. For significant changes we will notify you via the app or email at least 14 days before they take effect. The effective date at the top of this page always reflects the current version. Continued use of GainTrack after changes constitutes acceptance of the updated policy.</p>
+    </section><hr class="divider">
 
     <section>
       <h2>Contact</h2>
-      <p>Questions or concerns about this privacy policy?</p>
       <div class="contact-box">
         <p>📧 <a href="mailto:gaintrack.fitness@gmail.com">gaintrack.fitness@gmail.com</a></p>
+        <p style="margin-top:8px; font-size:13px; color: var(--muted);">We aim to respond to all privacy-related inquiries within 5 business days.</p>
       </div>
     </section>
-
   </div>
 </main>
-
 <footer>
   <div class="container">
-    © 2026 GainTrack · All rights reserved
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Privacy Policy</a>
+        <a href="terms.html" class="footer-link">Terms of Service</a>
+        <a href="delete-account.html" class="footer-link">Delete Account</a>
+      </div>
+      <span class="footer-copy">© 2026 GainTrack</span>
+    </div>
   </div>
 </footer>
-
 </body>
 </html>

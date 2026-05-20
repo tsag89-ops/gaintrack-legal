@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Account — GainTrack</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--surface:#111111;--border:#1e1e1e;--accent:#c8ff00;--red:#ff4444;--text:#e8e8e8;--muted:#555;--heading:#ffffff;--body:#a8a8a8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.75;}
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.nav-logo{font-family:'DM Mono',monospace;font-size:13px;font-weight:500;color:var(--accent);letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;}
+.nav-links{display:flex;gap:8px;}
+.nav-link{font-size:13px;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:20px;transition:all 0.15s;white-space:nowrap;}
+.nav-link:hover{color:var(--text);background:var(--surface);}
+.nav-link.active{color:var(--accent);background:rgba(200,255,0,0.08);}
+header{padding:64px 0 48px;border-bottom:1px solid var(--border);}
+.container{max-width:760px;margin:0 auto;padding:0 24px;}
+.tag{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:20px;display:block;}
+h1{font-size:clamp(28px,5vw,44px);font-weight:600;color:var(--heading);line-height:1.1;letter-spacing:-0.025em;}
+.meta{margin-top:16px;font-size:14px;color:var(--muted);}
+main{padding:64px 0 120px;}
+.warning-box{background:#140808;border:1px solid #2a1010;border-left:3px solid var(--red);padding:20px 24px;border-radius:4px;margin-bottom:56px;font-size:14px;color:#cc8888;}
+section{margin-bottom:52px;}
+h2{font-size:17px;font-weight:600;color:var(--heading);letter-spacing:-0.01em;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+h2::before{content:'';display:inline-block;width:5px;height:5px;background:var(--accent);border-radius:50%;flex-shrink:0;}
+p{margin-bottom:12px;color:var(--body);font-size:15px;}
+p:last-child{margin-bottom:0;}
+ul{list-style:none;margin:12px 0;padding:0;}
+ul li{padding:5px 0 5px 18px;position:relative;color:var(--body);font-size:15px;}
+ul li::before{content:'—';position:absolute;left:0;color:var(--accent);font-size:11px;top:8px;}
+strong{color:var(--text);font-weight:500;}
+.divider{border:none;border-top:1px solid var(--border);margin:0 0 52px;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.step-box{background:var(--surface);border:1px solid var(--border);padding:8px 24px;border-radius:8px;}
+.step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);}
+.step:last-child{border-bottom:none;}
+.step-num{width:28px;height:28px;background:var(--accent);color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;font-family:'DM Mono',monospace;margin-top:2px;}
+.step-text{font-size:15px;color:var(--body);line-height:1.6;}
+.step-text strong{color:var(--text);}
+.contact-box{background:var(--surface);border:1px solid var(--border);padding:24px;border-radius:8px;margin-top:12px;}
+.contact-box p{margin:4px 0;font-size:14px;}
+footer{border-top:1px solid var(--border);padding:40px 0;}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-links{display:flex;gap:20px;}
+.footer-link{font-size:13px;color:var(--muted);text-decoration:none;}
+.footer-link:hover{color:var(--text);}
+.footer-copy{font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">GainTrack</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Privacy</a>
+    <a href="terms.html" class="nav-link">Terms</a>
+    <a href="delete-account.html" class="nav-link active">Delete Account</a>
+  </div>
+</nav>
+<header>
+  <div class="container">
+    <span class="tag">Account</span>
+    <h1>Delete Your Account</h1>
+    <p class="meta">Your data, your choice — we make deletion straightforward.</p>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="warning-box">⚠️ Account deletion is <strong>permanent and cannot be undone</strong>. All your workout history, nutrition logs, measurements, and progress data will be permanently deleted.</div>
+
+    <section>
+      <h2>Delete From the App</h2>
+      <p>The fastest way to delete your account:</p>
+      <div class="step-box">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Open <strong>GainTrack</strong> and sign in</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Tap the <strong>Profile</strong> tab (bottom navigation)</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Scroll down to the <strong>Account</strong> section</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Tap <strong>Delete Account</strong> and confirm in the dialog</div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-text">Your account and all associated data will be permanently deleted immediately</div></div>
+      </div>
+    </section><hr class="divider">
+
+    <section>
+      <h2>Delete by Email</h2>
+      <p>If you cannot access the app, email us at <a href="mailto:gaintrack.fitness@gmail.com">gaintrack.fitness@gmail.com</a> with the subject line <strong>"Delete My Account"</strong> and include the email address associated with your GainTrack account. We will process your request within <strong>30 days</strong>.</p>
+    </section><hr class="divider">
+
+    <section>
+      <h2>What Gets Deleted</h2>
+      <p>The following data is permanently deleted within 30 days of your request:</p>
+      <ul>
+        <li>Account profile (name, email, profile picture)</li>
+        <li>All workout logs, exercises, sets, and history</li>
+        <li>All nutrition entries and meal tracking data</li>
+        <li>Body measurements and physique photos</li>
+        <li>Fitness goals, equipment preferences, and app settings</li>
+        <li>Friend connections and social/leaderboard data</li>
+        <li>Push notification tokens and preferences</li>
+        <li>AI Coach conversation history</li>
+        <li>Health integration data and sync history</li>
+      </ul>
+    </section><hr class="divider">
+
+    <section>
+      <h2>What May Be Retained</h2>
+      <ul>
+        <li><strong>Anonymized analytics:</strong> Aggregated, non-identifiable usage data that cannot be linked back to you</li>
+        <li><strong>Financial records:</strong> Subscription transaction records may be retained for up to 7 years to comply with applicable financial and tax regulations. These are held by RevenueCat and are subject to their <a href="https://www.revenuecat.com/privacy" target="_blank">Privacy Policy</a></li>
+        <li><strong>Legal holds:</strong> Data subject to active legal proceedings or regulatory requirements</li>
+      </ul>
+    </section><hr class="divider">
+
+    <section>
+      <h2>Partial Data Deletion</h2>
+      <p>You can request deletion of specific data categories without deleting your full account. For example, you can request deletion of your workout history only, or your nutrition data only.</p>
+      <p>Email <a href="mailto:gaintrack.fitness@gmail.com">gaintrack.fitness@gmail.com</a> specifying which data you'd like removed and your account email. We'll process the request within 30 days.</p>
+      <p>You can also export your data before deletion: <strong>Profile → Export My Data</strong>.</p>
+    </section><hr class="divider">
+
+    <section>
+      <h2>Cancel Your Subscription First</h2>
+      <p>Deleting your GainTrack account does <strong>not</strong> automatically cancel your Google Play subscription. To avoid future charges, cancel your subscription before deleting your account:</p>
+      <div class="step-box" style="margin-top:16px;">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Open <strong>Google Play Store</strong></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Tap your profile icon → <strong>Payments &amp; subscriptions</strong> → <strong>Subscriptions</strong></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Find <strong>GainTrack</strong> and tap <strong>Cancel subscription</strong></div></div>
+      </div>
+    </section><hr class="divider">
+
+    <section>
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <p>📧 <a href="mailto:gaintrack.fitness@gmail.com">gaintrack.fitness@gmail.com</a></p>
+        <p style="margin-top:8px;font-size:13px;color:var(--muted);">We respond to all account deletion requests within 5 business days.</p>
+      </div>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Privacy Policy</a>
+        <a href="terms.html" class="footer-link">Terms of Service</a>
+        <a href="delete-account.html" class="footer-link">Delete Account</a>
+      </div>
+      <span class="footer-copy">© 2026 GainTrack</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
