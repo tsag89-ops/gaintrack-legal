@@ -1,0 +1,24 @@
+# GainTrack
+
+> Gym workout tracker for Android. Log workouts, log meals, hit PRs — with an AI coach and progress analytics. Exclusively on Android.
+
+## About
+
+GainTrack is a fitness tracking app for lifters, athletes and home-gym users, built by a solo developer. Core features: set/rep/weight workout logging, PR and streak tracking, progress analytics (volume trends, strength curves), a routine/program builder, meal logging with macro tracking, a 240-exercise library, plate calculator, and an AI coach (workout and meal analysis, form feedback) for Pro users. Available in 5 languages (English, Greek, German, French, Italian). No ads. Free tier + optional Pro subscription via in-app purchase.
+
+- Platforms: Android only
+- Rating on Google Play: 3.8 / 5
+- Tagline: "Track workouts, log meals, hit PRs. Smart gym tracker with AI coach & progress."
+
+## Pro tier
+
+GainTrack Pro adds: AI coach (workout & meal analysis), unlimited routines (free tier keeps 3), advanced analytics & long-term trends, priority support.
+
+## Links
+
+- [Home](https://gaintrack.app/)
+- [Google Play listing](https://play.google.com/store/apps/details?id=com.tsag89ops.gaintrack)
+- [Privacy Policy](https://gaintrack.app/privacy.html)
+- [Terms of Service](https://gaintrack.app/terms.html)
+- [Delete Account](https://gaintrack.app/delete-account.html)
+- [Support email](mailto:support@gaintrack.app)
