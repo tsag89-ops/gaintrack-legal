@@ -3,190 +3,307 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — GainTrack</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>GainTrack: Gym Workout Tracker — Android</title>
+<meta name="description" content="Track workouts, log meals, hit PRs. Smart gym tracker with AI coach and progress analytics. Exclusively on Android — get GainTrack now.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gaintrack.app/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/icon-256.webp">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GainTrack">
+<meta property="og:title" content="GainTrack: Gym Workout Tracker">
+<meta property="og:description" content="Track workouts, log meals, hit PRs. Smart gym tracker with AI coach &amp; progress.">
+<meta property="og:url" content="https://gaintrack.app/">
+<meta property="og:image" content="https://gaintrack.app/shot-1.webp">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GainTrack: Gym Workout Tracker">
+<meta name="twitter:description" content="Track workouts, log meals, hit PRs. Smart gym tracker with AI coach &amp; progress.">
+<meta name="twitter:image" content="https://gaintrack.app/shot-1.webp">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        void: '#09090b',
+        neon: { cyan: '#00ffcc', magenta: '#ff007f', green: '#00ff66' },
+        frost: '#f4f4f5',
+      },
+      fontFamily: {
+        display: ['"Space Grotesk"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        'neon-cyan': '4px 4px 0 #00ffcc',
+        'neon-magenta': '4px 4px 0 #ff007f',
+        'neon-green': '4px 4px 0 #00ff66',
+      },
+    },
+  },
+};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-:root {
-  --bg: #0a0a0a; --surface: #111111; --border: #1e1e1e;
-  --accent: #c8ff00; --red: #ff4444; --text: #e8e8e8;
-  --muted: #555; --heading: #ffffff; --body: #a8a8a8;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.75; }
-nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
-.nav-logo { font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; }
-.nav-links { display: flex; gap: 8px; }
-.nav-link { font-size: 13px; color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 20px; transition: all 0.15s; white-space: nowrap; }
-.nav-link:hover { color: var(--text); background: var(--surface); }
-.nav-link.active { color: var(--accent); background: rgba(200,255,0,0.08); }
-header { padding: 64px 0 48px; border-bottom: 1px solid var(--border); }
-.container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
-.tag { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; display: block; }
-h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 600; color: var(--heading); line-height: 1.1; letter-spacing: -0.025em; }
-.meta { margin-top: 16px; font-size: 13px; color: var(--muted); font-family: 'DM Mono', monospace; }
-main { padding: 64px 0 120px; }
-.intro { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 20px 24px; border-radius: 4px; margin-bottom: 56px; font-size: 14px; color: var(--body); }
-section { margin-bottom: 52px; }
-h2 { font-size: 17px; font-weight: 600; color: var(--heading); letter-spacing: -0.01em; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
-h2::before { content: ''; display: inline-block; width: 5px; height: 5px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
-p { margin-bottom: 12px; color: var(--body); font-size: 15px; }
-p:last-child { margin-bottom: 0; }
-ul { list-style: none; margin: 12px 0; padding: 0; }
-ul li { padding: 5px 0 5px 18px; position: relative; color: var(--body); font-size: 15px; }
-ul li::before { content: '—'; position: absolute; left: 0; color: var(--accent); font-size: 11px; top: 8px; }
-strong { color: var(--text); font-weight: 500; }
-.divider { border: none; border-top: 1px solid var(--border); margin: 0 0 52px; }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.contact-box { background: var(--surface); border: 1px solid var(--border); padding: 24px; border-radius: 8px; margin-top: 12px; }
-.contact-box p { margin: 4px 0; font-size: 14px; }
-footer { border-top: 1px solid var(--border); padding: 40px 0; }
-.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 16px; }
-.footer-links { display: flex; gap: 20px; }
-.footer-link { font-size: 13px; color: var(--muted); text-decoration: none; }
-.footer-link:hover { color: var(--text); }
-.footer-copy { font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; }
-@media (max-width: 600px) { .nav-links .nav-link { font-size: 12px; padding: 5px 8px; } .footer-inner { flex-direction: column; align-items: flex-start; } }
+  html { scroll-behavior: smooth; }
+  section[id] { scroll-margin-top: 88px; }
+  body { background: #09090b; color: #f4f4f5; font-family: Inter, system-ui, sans-serif; }
+  /* synthwave horizon grid — restrained, signature element */
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(0,255,204,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,255,204,0.07) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse 90% 80% at 50% 0%, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 0%, black 30%, transparent 75%);
+  }
+  /* marquee ticker */
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .ticker-track { animation: ticker 22s linear infinite; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .ticker-track { animation: none; }
+  }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GainTrack: Gym Workout Tracker",
+  "applicationCategory": "HealthAndFitness",
+  "operatingSystem": "ANDROID",
+  "url": "https://play.google.com/store/apps/details?id=com.tsag89ops.gaintrack",
+  "description": "Track workouts, log meals, hit PRs. Smart gym tracker with AI coach and progress analytics.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free to download. Pro subscription available via in-app purchase."
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.8",
+    "bestRating": "5"
+  },
+  "screenshot": [
+    "https://gaintrack.app/shot-1.webp",
+    "https://gaintrack.app/shot-2.webp",
+    "https://gaintrack.app/shot-3.webp"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is GainTrack free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. GainTrack is free to download and use. A Pro subscription adds AI coaching, unlimited routines and advanced analytics via in-app purchase." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which platforms does GainTrack support?",
+      "acceptedAnswer": { "@type": "Answer", "text": "GainTrack is exclusively available on Android via the Google Play Store." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GainTrack work without an internet connection?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Core tracking works on-device. Your data syncs to your account when you're back online." }
+    }
+  ]
+}
+</script>
 </head>
-<body>
-<nav>
-  <a href="index.html" class="nav-logo">GainTrack</a>
-  <div class="nav-links">
-    <a href="index.html" class="nav-link active">Privacy</a>
-    <a href="terms.html" class="nav-link">Terms</a>
-    <a href="delete-account.html" class="nav-link">Delete Account</a>
-  </div>
-</nav>
-<header>
-  <div class="container">
-    <span class="tag">Legal</span>
-    <h1>Privacy Policy</h1>
-    <p class="meta">Effective: May 20, 2026 &nbsp;·&nbsp; Last updated: July 21, 2026</p>
+
+<body class="font-body antialiased">
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 border-b-2 border-neon-cyan bg-void">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+    <a href="/" class="font-display text-xl font-bold tracking-tight text-frost">
+      GAIN<span class="text-neon-cyan">TRACK</span>
+    </a>
+    <nav class="hidden items-center gap-8 font-mono text-sm uppercase tracking-wider text-frost/80 md:flex" aria-label="Main">
+      <a href="#features" class="transition-colors hover:text-neon-cyan">Features</a>
+      <a href="#screenshots" class="transition-colors hover:text-neon-cyan">Screenshots</a>
+      <a href="#pro" class="transition-colors hover:text-neon-cyan">Pro</a>
+      <a href="#faq" class="transition-colors hover:text-neon-cyan">FAQ</a>
+    </nav>
+    <a href="https://play.google.com/store/apps/details?id=com.tsag89ops.gaintrack"
+       class="border-2 border-neon-green bg-neon-green px-4 py-2 font-mono text-sm font-bold uppercase tracking-wide text-void shadow-neon-green transition-transform hover:-translate-y-0.5">
+      Get GainTrack
+    </a>
   </div>
 </header>
-<main>
-  <div class="container">
-    <div class="intro">Your privacy matters. This policy explains what data GainTrack collects, why, and how we protect it. We collect only what is necessary to provide the service.</div>
 
-    <section>
-      <h2>Who We Are</h2>
-      <p>GainTrack is a fitness tracking application. For questions about this policy, contact us at <a href="mailto:support@gaintrack.app">support@gaintrack.app</a>.</p>
-    </section><hr class="divider">
-
-    <section>
-      <h2>Information We Collect</h2>
-      <p>We collect information you provide and data generated by your use of the app:</p>
-      <ul>
-        <li><strong>Account information:</strong> Name, email address, and profile picture via Google Sign-In</li>
-        <li><strong>Password:</strong> If you create an email/password account, Firebase stores a salted hash of your password. We never have access to the plaintext.</li>
-        <li><strong>Fitness data:</strong> Workout logs, exercises, sets, reps, weight, and duration</li>
-        <li><strong>Nutrition data:</strong> Meal entries, food items, and daily macro totals</li>
-        <li><strong>Body measurements:</strong> Weight, body fat percentage, and physical measurements you log</li>
-        <li><strong>Photos and video you submit for AI analysis (Pro):</strong> If you use the Pro meal-photo or workout-video analysis features, the image or short video you capture is sent for AI processing. These may include images of food, your body, your surroundings, and — for video — your likeness. They are processed only to generate your analysis and are not stored after processing (see AI Coach Feature and Data Retention below).</li>
-        <li><strong>Goals and preferences:</strong> Fitness goals, equipment, calorie and macro targets</li>
-        <li><strong>Usage and telemetry data:</strong> Feature interactions and app performance metrics used to improve the product</li>
-        <li><strong>Push notification token:</strong> To deliver reminders (only if you grant permission)</li>
-      </ul>
-    </section><hr class="divider">
-
-    <section>
-      <h2>How We Use Your Information</h2>
-      <ul>
-        <li>Authenticate your identity and maintain your account</li>
-        <li>Store and sync your workout and nutrition history across devices</li>
-        <li>Generate personalized progression suggestions and AI coaching responses</li>
-        <li>Send lifecycle notifications and reminders you opt into</li>
-        <li>Analyze aggregate, anonymized usage to improve app features</li>
-        <li>Process subscription purchases via RevenueCat</li>
-        <li>Comply with legal obligations</li>
-      </ul>
-      <p>We do not sell your personal data. We do not use your data for advertising.</p>
-    </section><hr class="divider">
-
-    <section>
-      <h2>AI Coach Feature</h2>
-      <p>GainTrack Pro includes AI-powered features powered by Google Gemini: AI coaching (chat and progression suggestions), meal-photo analysis, and workout-video form analysis. When you use these features, the relevant data — your fitness data, the content of your messages, and, for the photo and video features, the image or short video you capture (which may include food, your body, your surroundings, and your likeness) — is sent to our secure backend and then to Google's Gemini API to generate your result. This data is used solely to produce your personalized response. Photos and videos are processed transiently and are not retained after your analysis is generated. We do not use your data to train AI models, and we operate the Gemini API under terms that prohibit Google from using your content to train its models. For these AI features, Google Cloud (Gemini API) acts as our data sub-processor, processing your content solely on our behalf and under the Google Cloud Data Processing Addendum (DPA), not for Google's own purposes. You can revoke AI data sharing consent at any time from Profile → Privacy, and the photo and video features additionally ask for your consent before capture.</p>
-    </section><hr class="divider">
-
-    <section>
-      <h2>Third-Party Services</h2>
-      <p>GainTrack integrates with the following third-party services, each governed by their own privacy policies:</p>
-      <ul>
-        <li><strong>Google Firebase &amp; Firestore</strong> — authentication and cloud data storage (<a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a>)</li>
-        <li><strong>RevenueCat</strong> — subscription and in-app purchase management (<a href="https://www.revenuecat.com/privacy" target="_blank">Privacy Policy</a>)</li>
-        <li><strong>Google Cloud — Gemini API</strong> — AI coaching, meal-photo, and workout-video analysis for Pro users; acts as a data sub-processor under the Google Cloud Data Processing Addendum (<a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>)</li>
-        <li><strong>Expo / EAS</strong> — app delivery and over-the-air updates (<a href="https://expo.dev/privacy" target="_blank">Privacy Policy</a>)</li>
-        <li><strong>MongoDB Atlas</strong> — backend database infrastructure (<a href="https://www.mongodb.com/legal/privacy-policy" target="_blank">Privacy Policy</a>)</li>
-        <li><strong>Apple Health / Google Fit</strong> — optional health data integration (Pro feature, requires explicit consent)</li>
-      </ul>
-    </section><hr class="divider">
-
-    <section>
-      <h2>Health Data</h2>
-      <p>If you enable health integrations (Pro feature), GainTrack may access workout and nutrition data from Apple Health or Google Fit with your explicit consent. Health data is used only to enrich your GainTrack experience and is never shared with third parties or used for advertising. You can revoke consent at any time from Profile → Health Integrations.</p>
-    </section><hr class="divider">
-
-    <section>
-      <h2>Data Storage and Security</h2>
-      <p>Your data is stored on Google Firestore and MongoDB Atlas, both using industry-standard encryption at rest and in transit (TLS 1.2+). We use Firebase Authentication to ensure only you can access your account. Authentication is handled by Firebase Authentication. If you sign in with Google, we receive an OAuth token only — we never see your Google password. If you sign in with email and password, your password is stored exclusively by Firebase using industry-standard salted-hash cryptography (scrypt); we never see or store the plaintext password. API keys and secrets are never stored in the app bundle.</p>
-    </section><hr class="divider">
-
-    <section>
-      <h2>Data Retention</h2>
-      <p>We retain your data for as long as your account is active. If you delete your account, your personal data is removed from our systems within 30 days. Subscription transaction records may be retained for up to 7 years to comply with applicable financial regulations. Anonymized, aggregated analytics data may be retained indefinitely. Photos and videos submitted to the AI analysis features are not retained after your analysis is generated — they are processed transiently and then discarded.</p>
-    </section><hr class="divider">
-
-    <section>
-      <h2>International Data Transfers</h2>
-      <p>GainTrack is operated from the European Union. Your data may be processed in data centers located in the EU and the United States (via Google Firebase and MongoDB Atlas). These transfers are subject to appropriate safeguards including Standard Contractual Clauses where required by applicable law.</p>
-    </section><hr class="divider">
-
-    <section>
-      <h2>Your Rights</h2>
-      <p>Depending on your location, you may have the following rights regarding your personal data:</p>
-      <ul>
-        <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
-        <li><strong>Correction:</strong> Request correction of inaccurate data</li>
-        <li><strong>Deletion:</strong> Request deletion of your account and associated data</li>
-        <li><strong>Portability:</strong> Export your data via Profile → Export My Data</li>
-        <li><strong>Restriction:</strong> Request we limit processing of your data</li>
-        <li><strong>Objection:</strong> Object to processing based on legitimate interests</li>
-        <li><strong>Withdraw consent:</strong> Revoke push notifications, AI data sharing, or health sync at any time via app settings</li>
-      </ul>
-      <p>To exercise any of these rights, contact us at <a href="mailto:support@gaintrack.app">support@gaintrack.app</a>. We will respond within 30 days. EU/EEA residents may also lodge a complaint with their local data protection authority.</p>
-    </section><hr class="divider">
-
-    <section>
-      <h2>Children's Privacy</h2>
-      <p>GainTrack is intended for users 18 years of age and older. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
-    </section><hr class="divider">
-
-    <section>
-      <h2>Changes to This Policy</h2>
-      <p>We may update this policy as the product evolves. For significant changes we will notify you via the app or email at least 14 days before they take effect. The effective date at the top of this page always reflects the current version. Continued use of GainTrack after changes constitutes acceptance of the updated policy.</p>
-    </section><hr class="divider">
-
-    <section>
-      <h2>Contact</h2>
-      <div class="contact-box">
-        <p>📧 <a href="mailto:support@gaintrack.app">support@gaintrack.app</a></p>
-        <p style="margin-top:8px; font-size:13px; color: var(--muted);">We aim to respond to all privacy-related inquiries within 5 business days.</p>
+<!-- ============ HERO ============ -->
+<section class="relative overflow-hidden">
+  <div class="grid-bg pointer-events-none absolute inset-0"></div>
+  <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 pt-16 md:grid-cols-2 md:pt-24">
+    <div>
+      <p class="mb-4 font-mono text-sm uppercase tracking-widest text-neon-magenta">Exclusively on Android</p>
+      <h1 class="font-display text-4xl font-bold leading-tight tracking-tight text-frost md:text-6xl">
+        TRAIN HARD.<br>
+        TRACK <span class="text-neon-cyan">EVERYTHING.</span>
+      </h1>
+      <p class="mt-6 max-w-md text-lg text-frost/80">
+        Track workouts, log meals, hit PRs. A smart gym tracker with an AI coach and progress analytics built for lifters who take the numbers seriously.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-6">
+        <a href="https://play.google.com/store/apps/details?id=com.tsag89ops.gaintrack"
+           class="border-2 border-neon-cyan px-6 py-3 font-mono text-base font-bold uppercase tracking-wide text-neon-cyan shadow-neon-cyan transition-transform hover:-translate-y-0.5">
+          Get it on Google Play
+        </a>
+        <div class="border-2 border-frost/30 px-4 py-2 font-mono text-sm text-frost/80">
+          ★ 3.8 on Google Play
+        </div>
       </div>
-    </section>
-  </div>
-</main>
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-links">
-        <a href="index.html" class="footer-link">Privacy Policy</a>
-        <a href="terms.html" class="footer-link">Terms of Service</a>
-        <a href="delete-account.html" class="footer-link">Delete Account</a>
-      </div>
-      <span class="footer-copy">© 2026 GainTrack</span>
+    </div>
+    <div class="mx-auto w-64 md:w-80">
+      <img src="/apex-hero.png" alt="Feature Apex — the GainTrack cybernetic ape mascot" class="w-full border-2 border-neon-magenta shadow-neon-magenta">
     </div>
   </div>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="overflow-hidden border-y-2 border-frost/20 bg-void py-3" aria-hidden="true">
+  <div class="ticker-track flex w-max gap-10 font-mono text-sm uppercase tracking-widest text-neon-green">
+    <span>Sets</span><span class="text-neon-cyan">•</span><span>Reps</span><span class="text-neon-cyan">•</span>
+    <span>PRs</span><span class="text-neon-cyan">•</span><span>Meals</span><span class="text-neon-cyan">•</span>
+    <span>AI Coach</span><span class="text-neon-cyan">•</span><span>Progress</span><span class="text-neon-cyan">•</span>
+    <span>Sets</span><span class="text-neon-cyan">•</span><span>Reps</span><span class="text-neon-cyan">•</span>
+    <span>PRs</span><span class="text-neon-cyan">•</span><span>Meals</span><span class="text-neon-cyan">•</span>
+    <span>AI Coach</span><span class="text-neon-cyan">•</span><span>Progress</span><span class="text-neon-cyan">•</span>
+  </div>
+</div>
+
+<!-- ============ FEATURES ============ -->
+<section id="features" class="mx-auto max-w-6xl px-4 py-20">
+  <p class="font-mono text-sm uppercase tracking-widest text-neon-magenta">01 — Core</p>
+  <h2 class="mt-2 font-display text-3xl font-bold text-frost md:text-4xl">Built for the grind</h2>
+  <div class="mt-10 grid gap-8 md:grid-cols-3">
+    <div class="border-2 border-neon-cyan bg-void p-6 shadow-neon-cyan">
+      <p class="font-mono text-xs uppercase tracking-widest text-neon-cyan">Module 01</p>
+      <h3 class="mt-3 font-display text-xl font-bold text-frost">Set &amp; Rep Tracking</h3>
+      <p class="mt-3 text-frost/75">Log every set, rep and kilo with a workout flow built for speed in the gym. Warm-up, work sets, RPE — all recorded.</p>
+    </div>
+    <div class="border-2 border-neon-green bg-void p-6 shadow-neon-green">
+      <p class="font-mono text-xs uppercase tracking-widest text-neon-green">Module 02</p>
+      <h3 class="mt-3 font-display text-xl font-bold text-frost">Progress Analytics</h3>
+      <p class="mt-3 text-frost/75">Volume trends, PR history and strength curves that show you what's actually working — not just what you did.</p>
+    </div>
+    <div class="border-2 border-neon-magenta bg-void p-6 shadow-neon-magenta">
+      <p class="font-mono text-xs uppercase tracking-widest text-neon-magenta">Module 03</p>
+      <h3 class="mt-3 font-display text-xl font-bold text-frost">Routine Builder</h3>
+      <p class="mt-3 text-frost/75">Design and schedule programs — push/pull/legs, PPL splits, custom blocks — and follow them day by day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCREENSHOTS ============ -->
+<section id="screenshots" class="border-t-2 border-frost/20 py-20">
+  <div class="mx-auto max-w-6xl px-4">
+    <p class="font-mono text-sm uppercase tracking-widest text-neon-magenta">02 — In action</p>
+    <h2 class="mt-2 font-display text-3xl font-bold text-frost md:text-4xl">See the app</h2>
+    <div class="mt-10 grid grid-cols-2 gap-6 md:grid-cols-3">
+      <img src="/shot-1.webp" alt="GainTrack screenshot 1" loading="lazy" class="w-full border-2 border-neon-cyan shadow-neon-cyan">
+      <img src="/shot-2.webp" alt="GainTrack screenshot 2" loading="lazy" class="w-full border-2 border-neon-green shadow-neon-green">
+      <img src="/shot-3.webp" alt="GainTrack screenshot 3" loading="lazy" class="w-full border-2 border-neon-magenta shadow-neon-magenta">
+      <img src="/shot-4.webp" alt="GainTrack screenshot 4" loading="lazy" class="w-full border-2 border-neon-magenta shadow-neon-magenta">
+      <img src="/shot-5.webp" alt="GainTrack screenshot 5" loading="lazy" class="w-full border-2 border-neon-cyan shadow-neon-cyan">
+      <img src="/shot-6.webp" alt="GainTrack screenshot 6" loading="lazy" class="w-full border-2 border-neon-green shadow-neon-green">
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRO ============ -->
+<section id="pro" class="border-t-2 border-frost/20 py-20">
+  <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-2">
+    <div>
+      <p class="font-mono text-sm uppercase tracking-widest text-neon-green">03 — Pro</p>
+      <h2 class="mt-2 font-display text-3xl font-bold text-frost md:text-4xl">GainTrack PRO</h2>
+      <p class="mt-4 text-frost/80">Everything in free, plus the tools that make progress inevitable.</p>
+      <ul class="mt-6 space-y-3 font-mono text-sm text-frost/85">
+        <li class="flex gap-3"><span class="text-neon-green">▸</span> AI coach — workout &amp; meal analysis on your data</li>
+        <li class="flex gap-3"><span class="text-neon-green">▸</span> Unlimited routines (free keeps 3)</li>
+        <li class="flex gap-3"><span class="text-neon-green">▸</span> Advanced analytics &amp; long-term trends</li>
+        <li class="flex gap-3"><span class="text-neon-green">▸</span> Priority support</li>
+      </ul>
+      <a href="https://play.google.com/store/apps/details?id=com.tsag89ops.gaintrack"
+         class="mt-8 inline-block border-2 border-neon-green bg-neon-green px-6 py-3 font-mono text-base font-bold uppercase tracking-wide text-void shadow-neon-green transition-transform hover:-translate-y-0.5">
+        Upgrade on Google Play
+      </a>
+    </div>
+    <div class="border-2 border-neon-green bg-void p-8 shadow-neon-green">
+      <p class="font-mono text-xs uppercase tracking-widest text-neon-green">PRO SPEC SHEET</p>
+      <div class="mt-6 space-y-6 font-mono text-sm">
+        <div class="flex justify-between border-b border-frost/20 pb-3"><span class="text-frost/70">AI Coaching</span><span class="text-neon-green">INCLUDED</span></div>
+        <div class="flex justify-between border-b border-frost/20 pb-3"><span class="text-frost/70">Routines</span><span class="text-neon-green">UNLIMITED</span></div>
+        <div class="flex justify-between border-b border-frost/20 pb-3"><span class="text-frost/70">Analytics</span><span class="text-neon-green">ADVANCED</span></div>
+        <div class="flex justify-between border-b border-frost/20 pb-3"><span class="text-frost/70">Workout Templates (Free)</span><span class="text-neon-magenta">3</span></div>
+        <div class="flex justify-between"><span class="text-frost/70">Support</span><span class="text-neon-green">PRIORITY</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="border-t-2 border-frost/20 py-20">
+  <div class="mx-auto max-w-3xl px-4">
+    <p class="font-mono text-sm uppercase tracking-widest text-neon-magenta">04 — FAQ</p>
+    <h2 class="mt-2 font-display text-3xl font-bold text-frost md:text-4xl">Questions</h2>
+    <div class="mt-10 space-y-6">
+      <details class="border-2 border-frost/30 bg-void p-5">
+        <summary class="cursor-pointer font-mono text-sm font-bold uppercase tracking-wide text-frost">Is GainTrack free?</summary>
+        <p class="mt-3 text-frost/75">Yes. GainTrack is free to download and use. A Pro subscription adds AI coaching, unlimited routines and advanced analytics via in-app purchase.</p>
+      </details>
+      <details class="border-2 border-frost/30 bg-void p-5">
+        <summary class="cursor-pointer font-mono text-sm font-bold uppercase tracking-wide text-frost">Which platforms does GainTrack support?</summary>
+        <p class="mt-3 text-frost/75">GainTrack is exclusively available on Android via the Google Play Store.</p>
+      </details>
+      <details class="border-2 border-frost/30 bg-void p-5">
+        <summary class="cursor-pointer font-mono text-sm font-bold uppercase tracking-wide text-frost">Does GainTrack work without an internet connection?</summary>
+        <p class="mt-3 text-frost/75">Core tracking works on-device. Your data syncs to your account when you're back online.</p>
+      </details>
+      <details class="border-2 border-frost/30 bg-void p-5">
+        <summary class="cursor-pointer font-mono text-sm font-bold uppercase tracking-wide text-frost">How do I delete my account or data?</summary>
+        <p class="mt-3 text-frost/75">Use the in-app delete option or email support@gaintrack.app — requests are processed within 30 days. See the <a href="/delete-account.html" class="text-neon-cyan underline">Delete Account</a> page.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t-2 border-neon-cyan bg-void">
+  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-4 py-10 md:flex-row md:items-start">
+    <div>
+      <p class="font-display text-xl font-bold text-frost">GAIN<span class="text-neon-cyan">TRACK</span></p>
+      <p class="mt-2 font-mono text-xs uppercase tracking-widest text-neon-green">Exclusively on Android</p>
+      <p class="mt-4 font-mono text-sm text-frost/60">© 2026 GainTrack. All rights reserved.</p>
+    </div>
+    <nav class="grid grid-cols-2 gap-x-16 gap-y-2 font-mono text-sm text-frost/80" aria-label="Footer">
+      <a href="#features" class="hover:text-neon-cyan">Features</a>
+      <a href="#screenshots" class="hover:text-neon-cyan">Screenshots</a>
+      <a href="#pro" class="hover:text-neon-cyan">Pro</a>
+      <a href="#faq" class="hover:text-neon-cyan">FAQ</a>
+      <a href="/privacy.html" class="hover:text-neon-cyan">Privacy Policy</a>
+      <a href="/terms.html" class="hover:text-neon-cyan">Terms of Service</a>
+      <a href="/delete-account.html" class="hover:text-neon-cyan">Delete Account</a>
+      <a href="mailto:support@gaintrack.app" class="hover:text-neon-cyan">Support</a>
+    </nav>
+  </div>
 </footer>
+
 </body>
 </html>
