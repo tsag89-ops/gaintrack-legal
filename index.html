@@ -29,20 +29,11 @@
 tailwind.config = {
   theme: {
     extend: {
-      colors: {
-        void: '#09090b',
-        neon: { cyan: '#00ffcc', magenta: '#ff007f', green: '#00ff66' },
-        frost: '#f4f4f5',
-      },
+      colors: { void: '#09090b', accent: '#00ffcc', frost: '#f4f4f5' },
       fontFamily: {
         display: ['"Space Grotesk"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
         body: ['Inter', 'system-ui', 'sans-serif'],
-      },
-      boxShadow: {
-        'neon-cyan': '4px 4px 0 #00ffcc',
-        'neon-magenta': '4px 4px 0 #ff007f',
-        'neon-green': '4px 4px 0 #00ff66',
       },
     },
   },
@@ -50,28 +41,13 @@ tailwind.config = {
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   html { scroll-behavior: smooth; }
-  section[id] { scroll-margin-top: 88px; }
+  section[id] { scroll-margin-top: 84px; }
   body { background: #09090b; color: #f4f4f5; font-family: Inter, system-ui, sans-serif; }
-  /* synthwave horizon grid — restrained, signature element */
-  .grid-bg {
-    background-image:
-      linear-gradient(rgba(0,255,204,0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,255,204,0.07) 1px, transparent 1px);
-    background-size: 44px 44px;
-    mask-image: radial-gradient(ellipse 90% 80% at 50% 0%, black 30%, transparent 75%);
-    -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 0%, black 30%, transparent 75%);
-  }
-  /* marquee ticker */
-  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  .ticker-track { animation: ticker 22s linear infinite; }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .ticker-track { animation: none; }
-  }
+  details summary::-webkit-details-marker { display: none; }
 </style>
 
 <script type="application/ld+json">
@@ -129,178 +105,178 @@ tailwind.config = {
 <body class="font-body antialiased">
 
 <!-- ============ HEADER ============ -->
-<header class="sticky top-0 z-50 border-b-2 border-neon-cyan bg-void">
+<header class="sticky top-0 z-50 border-b border-white/10 bg-void">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
     <a href="/" class="font-display text-xl font-bold tracking-tight text-frost">
-      GAIN<span class="text-neon-cyan">TRACK</span>
+      GAIN<span class="text-accent">TRACK</span>
     </a>
-    <nav class="hidden items-center gap-8 font-mono text-sm uppercase tracking-wider text-frost/80 md:flex" aria-label="Main">
-      <a href="#features" class="transition-colors hover:text-neon-cyan">Features</a>
-      <a href="#screenshots" class="transition-colors hover:text-neon-cyan">Screenshots</a>
-      <a href="#pro" class="transition-colors hover:text-neon-cyan">Pro</a>
-      <a href="#faq" class="transition-colors hover:text-neon-cyan">FAQ</a>
+    <nav class="hidden items-center gap-8 text-sm text-zinc-400 md:flex" aria-label="Main">
+      <a href="#features" class="transition-colors hover:text-frost">Features</a>
+      <a href="#screenshots" class="transition-colors hover:text-frost">Screenshots</a>
+      <a href="#pro" class="transition-colors hover:text-frost">Pro</a>
+      <a href="#faq" class="transition-colors hover:text-frost">FAQ</a>
     </nav>
     <a href="https://play.google.com/store/apps/details?id=com.tsag89ops.gaintrack"
-       class="border-2 border-neon-green bg-neon-green px-4 py-2 font-mono text-sm font-bold uppercase tracking-wide text-void shadow-neon-green transition-transform hover:-translate-y-0.5">
+       class="bg-accent px-4 py-2 text-sm font-semibold text-black transition-opacity hover:opacity-80">
       Get GainTrack
     </a>
   </div>
 </header>
 
 <!-- ============ HERO ============ -->
-<section class="relative overflow-hidden">
-  <div class="grid-bg pointer-events-none absolute inset-0"></div>
-  <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 pt-16 md:grid-cols-2 md:pt-24">
-    <div>
-      <p class="mb-4 font-mono text-sm uppercase tracking-widest text-neon-magenta">Exclusively on Android</p>
-      <h1 class="font-display text-4xl font-bold leading-tight tracking-tight text-frost md:text-6xl">
-        TRAIN HARD.<br>
-        TRACK <span class="text-neon-cyan">EVERYTHING.</span>
-      </h1>
-      <p class="mt-6 max-w-md text-lg text-frost/80">
-        Track workouts, log meals, hit PRs. A smart gym tracker with an AI coach and progress analytics built for lifters who take the numbers seriously.
-      </p>
-      <div class="mt-8 flex flex-wrap items-center gap-6">
-        <a href="https://play.google.com/store/apps/details?id=com.tsag89ops.gaintrack"
-           class="border-2 border-neon-cyan px-6 py-3 font-mono text-base font-bold uppercase tracking-wide text-neon-cyan shadow-neon-cyan transition-transform hover:-translate-y-0.5">
-          Get it on Google Play
-        </a>
-        <div class="border-2 border-frost/30 px-4 py-2 font-mono text-sm text-frost/80">
-          ★ 3.8 on Google Play
-        </div>
-      </div>
+<section class="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 pt-16 md:grid-cols-2 md:pt-24">
+  <div>
+    <p class="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-zinc-500">Exclusively on Android</p>
+    <h1 class="font-display text-4xl font-bold leading-tight tracking-tight text-frost md:text-6xl">
+      Train hard.<br>
+      <span class="text-accent">Track everything.</span>
+    </h1>
+    <p class="mt-6 max-w-md text-lg text-zinc-400">
+      Track workouts, log meals, hit PRs. A gym tracker with an AI coach and progress analytics for lifters who take the numbers seriously.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center gap-4">
+      <a href="https://play.google.com/store/apps/details?id=com.tsag89ops.gaintrack"
+         class="bg-accent px-6 py-3 text-base font-semibold text-black transition-opacity hover:opacity-80">
+        Get it on Google Play
+      </a>
+      <a href="#features" class="border border-white/20 px-6 py-3 text-base font-medium text-zinc-300 transition-colors hover:border-white/50 hover:text-frost">
+        See features
+      </a>
+      <p class="font-mono text-sm text-zinc-500">★ 3.8 on Google Play</p>
     </div>
-    <div class="mx-auto w-64 md:w-80">
-      <img src="/apex-hero.png" alt="Feature Apex — the GainTrack cybernetic ape mascot" class="w-full border-2 border-neon-magenta shadow-neon-magenta">
-    </div>
+  </div>
+  <div class="mx-auto w-64 md:w-80">
+    <img src="/apex-hero.png" alt="Feature Apex — the GainTrack cybernetic ape mascot" class="w-full border border-white/10">
   </div>
 </section>
 
-<!-- ============ TICKER ============ -->
-<div class="overflow-hidden border-y-2 border-frost/20 bg-void py-3" aria-hidden="true">
-  <div class="ticker-track flex w-max gap-10 font-mono text-sm uppercase tracking-widest text-neon-green">
-    <span>Sets</span><span class="text-neon-cyan">•</span><span>Reps</span><span class="text-neon-cyan">•</span>
-    <span>PRs</span><span class="text-neon-cyan">•</span><span>Meals</span><span class="text-neon-cyan">•</span>
-    <span>AI Coach</span><span class="text-neon-cyan">•</span><span>Progress</span><span class="text-neon-cyan">•</span>
-    <span>Sets</span><span class="text-neon-cyan">•</span><span>Reps</span><span class="text-neon-cyan">•</span>
-    <span>PRs</span><span class="text-neon-cyan">•</span><span>Meals</span><span class="text-neon-cyan">•</span>
-    <span>AI Coach</span><span class="text-neon-cyan">•</span><span>Progress</span><span class="text-neon-cyan">•</span>
-  </div>
-</div>
-
 <!-- ============ FEATURES ============ -->
-<section id="features" class="mx-auto max-w-6xl px-4 py-20">
-  <p class="font-mono text-sm uppercase tracking-widest text-neon-magenta">01 — Core</p>
-  <h2 class="mt-2 font-display text-3xl font-bold text-frost md:text-4xl">Built for the grind</h2>
-  <div class="mt-10 grid gap-8 md:grid-cols-3">
-    <div class="border-2 border-neon-cyan bg-void p-6 shadow-neon-cyan">
-      <p class="font-mono text-xs uppercase tracking-widest text-neon-cyan">Module 01</p>
-      <h3 class="mt-3 font-display text-xl font-bold text-frost">Set &amp; Rep Tracking</h3>
-      <p class="mt-3 text-frost/75">Log every set, rep and kilo with a workout flow built for speed in the gym. Warm-up, work sets, RPE — all recorded.</p>
-    </div>
-    <div class="border-2 border-neon-green bg-void p-6 shadow-neon-green">
-      <p class="font-mono text-xs uppercase tracking-widest text-neon-green">Module 02</p>
-      <h3 class="mt-3 font-display text-xl font-bold text-frost">Progress Analytics</h3>
-      <p class="mt-3 text-frost/75">Volume trends, PR history and strength curves that show you what's actually working — not just what you did.</p>
-    </div>
-    <div class="border-2 border-neon-magenta bg-void p-6 shadow-neon-magenta">
-      <p class="font-mono text-xs uppercase tracking-widest text-neon-magenta">Module 03</p>
-      <h3 class="mt-3 font-display text-xl font-bold text-frost">Routine Builder</h3>
-      <p class="mt-3 text-frost/75">Design and schedule programs — push/pull/legs, PPL splits, custom blocks — and follow them day by day.</p>
+<section id="features" class="border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-4 py-20">
+    <p class="font-mono text-xs uppercase tracking-[0.25em] text-accent">01 · Core</p>
+    <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-frost md:text-4xl">Built for the grind</h2>
+    <div class="mt-12 grid gap-px border border-white/10 bg-white/10 md:grid-cols-3">
+      <div class="bg-void p-7">
+        <span class="inline-block h-2 w-2 bg-accent"></span>
+        <h3 class="mt-4 font-display text-xl font-semibold text-frost">Set &amp; rep tracking</h3>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-400">Log every set, rep and kilo with a flow built for speed in the gym. Warm-ups, work sets, RPE — all recorded.</p>
+      </div>
+      <div class="bg-void p-7">
+        <span class="inline-block h-2 w-2 bg-accent"></span>
+        <h3 class="mt-4 font-display text-xl font-semibold text-frost">Progress analytics</h3>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-400">Volume trends, PR history and strength curves that show what's working — not just what you did.</p>
+      </div>
+      <div class="bg-void p-7">
+        <span class="inline-block h-2 w-2 bg-accent"></span>
+        <h3 class="mt-4 font-display text-xl font-semibold text-frost">Routine builder</h3>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-400">Design and schedule programs — PPL splits, custom blocks — and follow them day by day.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ SCREENSHOTS ============ -->
-<section id="screenshots" class="border-t-2 border-frost/20 py-20">
-  <div class="mx-auto max-w-6xl px-4">
-    <p class="font-mono text-sm uppercase tracking-widest text-neon-magenta">02 — In action</p>
-    <h2 class="mt-2 font-display text-3xl font-bold text-frost md:text-4xl">See the app</h2>
-    <div class="mt-10 grid grid-cols-2 gap-6 md:grid-cols-3">
-      <img src="/shot-1.webp" alt="GainTrack screenshot 1" loading="lazy" class="w-full border-2 border-neon-cyan shadow-neon-cyan">
-      <img src="/shot-2.webp" alt="GainTrack screenshot 2" loading="lazy" class="w-full border-2 border-neon-green shadow-neon-green">
-      <img src="/shot-3.webp" alt="GainTrack screenshot 3" loading="lazy" class="w-full border-2 border-neon-magenta shadow-neon-magenta">
-      <img src="/shot-4.webp" alt="GainTrack screenshot 4" loading="lazy" class="w-full border-2 border-neon-magenta shadow-neon-magenta">
-      <img src="/shot-5.webp" alt="GainTrack screenshot 5" loading="lazy" class="w-full border-2 border-neon-cyan shadow-neon-cyan">
-      <img src="/shot-6.webp" alt="GainTrack screenshot 6" loading="lazy" class="w-full border-2 border-neon-green shadow-neon-green">
+<section id="screenshots" class="border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-4 py-20">
+    <p class="font-mono text-xs uppercase tracking-[0.25em] text-accent">02 · In action</p>
+    <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-frost md:text-4xl">See the app</h2>
+    <div class="mt-12 grid grid-cols-2 gap-6 md:grid-cols-3">
+      <img src="/shot-1.webp" alt="GainTrack screenshot 1" loading="lazy" class="w-full border border-white/10 transition-colors hover:border-accent">
+      <img src="/shot-2.webp" alt="GainTrack screenshot 2" loading="lazy" class="w-full border border-white/10 transition-colors hover:border-accent">
+      <img src="/shot-3.webp" alt="GainTrack screenshot 3" loading="lazy" class="w-full border border-white/10 transition-colors hover:border-accent">
+      <img src="/shot-4.webp" alt="GainTrack screenshot 4" loading="lazy" class="w-full border border-white/10 transition-colors hover:border-accent">
+      <img src="/shot-5.webp" alt="GainTrack screenshot 5" loading="lazy" class="w-full border border-white/10 transition-colors hover:border-accent">
+      <img src="/shot-6.webp" alt="GainTrack screenshot 6" loading="lazy" class="w-full border border-white/10 transition-colors hover:border-accent">
     </div>
   </div>
 </section>
 
 <!-- ============ PRO ============ -->
-<section id="pro" class="border-t-2 border-frost/20 py-20">
-  <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-2">
+<section id="pro" class="border-t border-white/10">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 md:grid-cols-2">
     <div>
-      <p class="font-mono text-sm uppercase tracking-widest text-neon-green">03 — Pro</p>
-      <h2 class="mt-2 font-display text-3xl font-bold text-frost md:text-4xl">GainTrack PRO</h2>
-      <p class="mt-4 text-frost/80">Everything in free, plus the tools that make progress inevitable.</p>
-      <ul class="mt-6 space-y-3 font-mono text-sm text-frost/85">
-        <li class="flex gap-3"><span class="text-neon-green">▸</span> AI coach — workout &amp; meal analysis on your data</li>
-        <li class="flex gap-3"><span class="text-neon-green">▸</span> Unlimited routines (free keeps 3)</li>
-        <li class="flex gap-3"><span class="text-neon-green">▸</span> Advanced analytics &amp; long-term trends</li>
-        <li class="flex gap-3"><span class="text-neon-green">▸</span> Priority support</li>
+      <p class="font-mono text-xs uppercase tracking-[0.25em] text-accent">03 · Pro</p>
+      <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-frost md:text-4xl">GainTrack PRO</h2>
+      <p class="mt-4 text-zinc-400">Everything in free, plus the tools that make progress inevitable.</p>
+      <ul class="mt-8 space-y-4 text-frost">
+        <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 bg-accent"></span><span>AI coach — workout &amp; meal analysis on your data</span></li>
+        <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 bg-accent"></span><span>Unlimited routines (free keeps 3)</span></li>
+        <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 bg-accent"></span><span>Advanced analytics &amp; long-term trends</span></li>
+        <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 bg-accent"></span><span>Priority support</span></li>
       </ul>
       <a href="https://play.google.com/store/apps/details?id=com.tsag89ops.gaintrack"
-         class="mt-8 inline-block border-2 border-neon-green bg-neon-green px-6 py-3 font-mono text-base font-bold uppercase tracking-wide text-void shadow-neon-green transition-transform hover:-translate-y-0.5">
+         class="mt-10 inline-block bg-accent px-6 py-3 text-base font-semibold text-black transition-opacity hover:opacity-80">
         Upgrade on Google Play
       </a>
     </div>
-    <div class="border-2 border-neon-green bg-void p-8 shadow-neon-green">
-      <p class="font-mono text-xs uppercase tracking-widest text-neon-green">PRO SPEC SHEET</p>
-      <div class="mt-6 space-y-6 font-mono text-sm">
-        <div class="flex justify-between border-b border-frost/20 pb-3"><span class="text-frost/70">AI Coaching</span><span class="text-neon-green">INCLUDED</span></div>
-        <div class="flex justify-between border-b border-frost/20 pb-3"><span class="text-frost/70">Routines</span><span class="text-neon-green">UNLIMITED</span></div>
-        <div class="flex justify-between border-b border-frost/20 pb-3"><span class="text-frost/70">Analytics</span><span class="text-neon-green">ADVANCED</span></div>
-        <div class="flex justify-between border-b border-frost/20 pb-3"><span class="text-frost/70">Workout Templates (Free)</span><span class="text-neon-magenta">3</span></div>
-        <div class="flex justify-between"><span class="text-frost/70">Support</span><span class="text-neon-green">PRIORITY</span></div>
-      </div>
+    <div class="border border-white/10">
+      <div class="border-b border-white/10 px-7 py-5 font-mono text-xs uppercase tracking-[0.25em] text-zinc-500">Pro spec sheet</div>
+      <dl class="px-7">
+        <div class="flex justify-between border-b border-white/10 py-4"><dt class="text-zinc-400">AI coaching</dt><dd class="font-medium text-frost">Included</dd></div>
+        <div class="flex justify-between border-b border-white/10 py-4"><dt class="text-zinc-400">Routines</dt><dd class="font-medium text-frost">Unlimited</dd></div>
+        <div class="flex justify-between border-b border-white/10 py-4"><dt class="text-zinc-400">Analytics</dt><dd class="font-medium text-frost">Advanced</dd></div>
+        <div class="flex justify-between border-b border-white/10 py-4"><dt class="text-zinc-400">Free templates</dt><dd class="font-medium text-frost">3</dd></div>
+        <div class="flex justify-between py-4"><dt class="text-zinc-400">Support</dt><dd class="font-medium text-frost">Priority</dd></div>
+      </dl>
     </div>
   </div>
 </section>
 
 <!-- ============ FAQ ============ -->
-<section id="faq" class="border-t-2 border-frost/20 py-20">
-  <div class="mx-auto max-w-3xl px-4">
-    <p class="font-mono text-sm uppercase tracking-widest text-neon-magenta">04 — FAQ</p>
-    <h2 class="mt-2 font-display text-3xl font-bold text-frost md:text-4xl">Questions</h2>
-    <div class="mt-10 space-y-6">
-      <details class="border-2 border-frost/30 bg-void p-5">
-        <summary class="cursor-pointer font-mono text-sm font-bold uppercase tracking-wide text-frost">Is GainTrack free?</summary>
-        <p class="mt-3 text-frost/75">Yes. GainTrack is free to download and use. A Pro subscription adds AI coaching, unlimited routines and advanced analytics via in-app purchase.</p>
+<section id="faq" class="border-t border-white/10">
+  <div class="mx-auto max-w-3xl px-4 py-20">
+    <p class="font-mono text-xs uppercase tracking-[0.25em] text-accent">04 · FAQ</p>
+    <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-frost md:text-4xl">Questions</h2>
+    <div class="mt-12 divide-y divide-white/10 border-y border-white/10">
+      <details class="group py-5">
+        <summary class="flex cursor-pointer items-center justify-between font-display text-lg font-medium text-frost">
+          Is GainTrack free?
+          <span class="text-zinc-500 transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-400">Yes. GainTrack is free to download and use. A Pro subscription adds AI coaching, unlimited routines and advanced analytics via in-app purchase.</p>
       </details>
-      <details class="border-2 border-frost/30 bg-void p-5">
-        <summary class="cursor-pointer font-mono text-sm font-bold uppercase tracking-wide text-frost">Which platforms does GainTrack support?</summary>
-        <p class="mt-3 text-frost/75">GainTrack is exclusively available on Android via the Google Play Store.</p>
+      <details class="group py-5">
+        <summary class="flex cursor-pointer items-center justify-between font-display text-lg font-medium text-frost">
+          Which platforms does GainTrack support?
+          <span class="text-zinc-500 transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-400">GainTrack is exclusively available on Android via the Google Play Store.</p>
       </details>
-      <details class="border-2 border-frost/30 bg-void p-5">
-        <summary class="cursor-pointer font-mono text-sm font-bold uppercase tracking-wide text-frost">Does GainTrack work without an internet connection?</summary>
-        <p class="mt-3 text-frost/75">Core tracking works on-device. Your data syncs to your account when you're back online.</p>
+      <details class="group py-5">
+        <summary class="flex cursor-pointer items-center justify-between font-display text-lg font-medium text-frost">
+          Does GainTrack work without an internet connection?
+          <span class="text-zinc-500 transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-400">Core tracking works on-device. Your data syncs to your account when you're back online.</p>
       </details>
-      <details class="border-2 border-frost/30 bg-void p-5">
-        <summary class="cursor-pointer font-mono text-sm font-bold uppercase tracking-wide text-frost">How do I delete my account or data?</summary>
-        <p class="mt-3 text-frost/75">Use the in-app delete option or email support@gaintrack.app — requests are processed within 30 days. See the <a href="/delete-account.html" class="text-neon-cyan underline">Delete Account</a> page.</p>
+      <details class="group py-5">
+        <summary class="flex cursor-pointer items-center justify-between font-display text-lg font-medium text-frost">
+          How do I delete my account or data?
+          <span class="text-zinc-500 transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-400">Use the in-app delete option or email support@gaintrack.app — requests are processed within 30 days. See the <a href="/delete-account.html" class="text-accent underline">Delete Account</a> page.</p>
       </details>
     </div>
   </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
-<footer class="border-t-2 border-neon-cyan bg-void">
-  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-4 py-10 md:flex-row md:items-start">
+<footer class="border-t border-white/10">
+  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-4 py-12 md:flex-row md:items-start">
     <div>
-      <p class="font-display text-xl font-bold text-frost">GAIN<span class="text-neon-cyan">TRACK</span></p>
-      <p class="mt-2 font-mono text-xs uppercase tracking-widest text-neon-green">Exclusively on Android</p>
-      <p class="mt-4 font-mono text-sm text-frost/60">© 2026 GainTrack. All rights reserved.</p>
+      <p class="font-display text-xl font-bold text-frost">GAIN<span class="text-accent">TRACK</span></p>
+      <p class="mt-3 text-sm text-zinc-500">Exclusively on Android</p>
+      <p class="mt-6 text-sm text-zinc-600">© 2026 GainTrack. All rights reserved.</p>
     </div>
-    <nav class="grid grid-cols-2 gap-x-16 gap-y-2 font-mono text-sm text-frost/80" aria-label="Footer">
-      <a href="#features" class="hover:text-neon-cyan">Features</a>
-      <a href="#screenshots" class="hover:text-neon-cyan">Screenshots</a>
-      <a href="#pro" class="hover:text-neon-cyan">Pro</a>
-      <a href="#faq" class="hover:text-neon-cyan">FAQ</a>
-      <a href="/privacy.html" class="hover:text-neon-cyan">Privacy Policy</a>
-      <a href="/terms.html" class="hover:text-neon-cyan">Terms of Service</a>
-      <a href="/delete-account.html" class="hover:text-neon-cyan">Delete Account</a>
-      <a href="mailto:support@gaintrack.app" class="hover:text-neon-cyan">Support</a>
+    <nav class="grid grid-cols-2 gap-x-16 gap-y-3 text-sm text-zinc-400" aria-label="Footer">
+      <a href="#features" class="transition-colors hover:text-frost">Features</a>
+      <a href="#screenshots" class="transition-colors hover:text-frost">Screenshots</a>
+      <a href="#pro" class="transition-colors hover:text-frost">Pro</a>
+      <a href="#faq" class="transition-colors hover:text-frost">FAQ</a>
+      <a href="/privacy.html" class="transition-colors hover:text-frost">Privacy Policy</a>
+      <a href="/terms.html" class="transition-colors hover:text-frost">Terms of Service</a>
+      <a href="/delete-account.html" class="transition-colors hover:text-frost">Delete Account</a>
+      <a href="mailto:support@gaintrack.app" class="transition-colors hover:text-frost">Support</a>
     </nav>
   </div>
 </footer>
