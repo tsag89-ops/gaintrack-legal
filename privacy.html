@@ -80,7 +80,7 @@ tailwind.config = {
   <div class="container">
     <span class="tag">Legal</span>
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective: May 20, 2026 &nbsp;·&nbsp; Last updated: July 21, 2026</p>
+    <p class="meta">Effective: May 20, 2026 &nbsp;·&nbsp; Last updated: September 26, 2026</p>
   </div>
 </div>
 
@@ -125,7 +125,7 @@ tailwind.config = {
 
     <section>
       <h2>AI Coach Feature</h2>
-      <p>GainTrack Pro includes AI-powered features powered by Google Gemini: AI coaching (chat and progression suggestions), meal-photo analysis, and workout-video form analysis. When you use these features, the relevant data — your fitness data, the content of your messages, and, for the photo and video features, the image or short video you capture (which may include food, your body, your surroundings, and your likeness) — is sent to our secure backend and then to Google's Gemini API to generate your result. This data is used solely to produce your personalized response. Photos and videos are processed transiently and are not retained after your analysis is generated. We do not use your data to train AI models, and we operate the Gemini API under terms that prohibit Google from using your content to train its models. For these AI features, Google Cloud (Gemini API) acts as our data sub-processor, processing your content solely on our behalf and under the Google Cloud Data Processing Addendum (DPA), not for Google's own purposes. You can revoke AI data sharing consent at any time from Profile → Privacy, and the photo and video features additionally ask for your consent before capture.</p>
+      <p>GainTrack Pro includes AI-powered features powered by Google Gemini: AI coaching (chat and progression suggestions), meal-photo analysis, and workout-video form analysis. When you use these features, the relevant data — your fitness data, the content of your messages, and, for the photo and video features, the image or short video you capture (which may include food, your body, your surroundings, and your likeness) — is sent to our secure backend and then to Google's Gemini API to generate your result. This data is used solely to produce your personalized response. Photos and videos are processed transiently and are not retained after your analysis is generated. We do not use your data to train AI models, and we operate the Gemini API under terms that prohibit Google from using your content to train its models. For these AI features, Google Cloud (Gemini API) acts as our data sub-processor, processing your content solely on our behalf and under the Google Cloud Data Processing Addendum (DPA), not for Google's own purposes. Separately from Gemini, we test an AI request-routing service (Typesafe, reached through OpenRouter) in shadow mode: it receives the text of your question only — never your fitness data, health data, photos or videos — and its answer is only measured against the response Gemini already produced, so it never changes your result. Typesafe states it does not train on customer data; we do not enable its optional zero-data-retention setting. You can revoke AI data sharing consent at any time from Profile → Privacy, and the photo and video features additionally ask for your consent before capture.</p>
     </section><hr class="divider">
 
     <section>
@@ -136,14 +136,15 @@ tailwind.config = {
         <li><strong>RevenueCat</strong> — subscription and in-app purchase management (<a href="https://www.revenuecat.com/privacy" target="_blank">Privacy Policy</a>)</li>
         <li><strong>Google Cloud — Gemini API</strong> — AI coaching, meal-photo, and workout-video analysis for Pro users; acts as a data sub-processor under the Google Cloud Data Processing Addendum (<a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>)</li>
         <li><strong>Expo / EAS</strong> — app delivery and over-the-air updates (<a href="https://expo.dev/privacy" target="_blank">Privacy Policy</a>)</li>
+        <li><strong>OpenRouter (Typesafe Jev)</strong> — AI request-routing test in shadow mode for Pro coaching chat; receives the text of your question only, never your fitness or health data, photos or videos, and never changes your result (<a href="https://openrouter.ai/privacy" target="_blank">Privacy Policy</a>)</li>
         <li><strong>MongoDB Atlas</strong> — backend database infrastructure (<a href="https://www.mongodb.com/legal/privacy-policy" target="_blank">Privacy Policy</a>)</li>
-        <li><strong>Apple Health / Google Fit</strong> — optional health data integration (Pro feature, requires explicit consent)</li>
+        <li><strong>Apple Health / Health Connect</strong> — optional health data integration (Pro feature, requires explicit consent)</li>
       </ul>
     </section><hr class="divider">
 
     <section>
       <h2>Health Data</h2>
-      <p>If you enable health integrations (Pro feature), GainTrack may access workout and nutrition data from Apple Health or Google Fit with your explicit consent. Health data is used only to enrich your GainTrack experience and is never shared with third parties or used for advertising. You can revoke consent at any time from Profile → Health Integrations.</p>
+      <p>If you enable health integrations (Pro feature), GainTrack may access workout and nutrition data from Apple Health or Health Connect with your explicit consent. Health data is used only to enrich your GainTrack experience and is never shared with third parties or used for advertising. You can revoke consent at any time from Profile → Health Integrations.</p>
     </section><hr class="divider">
 
     <section>
